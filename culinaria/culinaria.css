@@ -6,47 +6,129 @@
     scroll-behavior: smooth;
 }
 
-
 body {
-    background-color: #f7f7f7;
-    color: #222;
-    line-height: 1.6;
+    background-color: #0c8b77;
+    color: white;
 }
 
+#page {
+    width: 100%;
+    margin: 0 auto;
+}
 
 header {
+    position: fixed;
     width: 100%;
-    margin: 0;
-    padding: 0; 
+    top: 0;
+    z-index: 10;
+    background-color: #238a68;
+    padding: 30px 130px;
 }
 
-header img {
-    width: 100%;
-    height: auto;
-    display: block; 
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-
-nav {
-    background: #283593;
-    text-align: center;
-    padding: 12px;
+header ul li img {
+    height: 55px;
 }
 
-nav a {
+header ul li a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+main::before {
+    content: "";
+    width: 100%;
+    height: 330px;
+    display: block;
+    background-image: url("/assets/image_culinaria.png");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.7);
+}
+
+
+main {
+    margin-top: 130px;
+}
+
+main::after {
+    content: "CULINÁRIA";
+    position: absolute;
+    top: 180px;
+    left: 60px;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
+main > p {
+    text-align: center;
+    width: 80%;
+    margin: 50px auto;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.norte, .centro_oeste, .sul {
+    width: 75%;
+    background-color: #136a6a;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.norte img, .centro_oeste img, .sul img {
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.3);
+}
+
+.norte ul, .centro_oeste ul, .sul ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.norte ul::before {
+    content: "REGIÃO NORTE";
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f6d94b;
     font-weight: 600;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.centro_oeste ul::before {
+    content: "REGIÃO CENTRO OESTE";
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f6d94b;
+    font-weight: 600;
 }
 
-section {
-    padding: 20px 40px;
+.sul ul::before {
+    content: "REGIÃO SUL";
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f6d94b;
+    font-weight: 600;
 }
+
 footer {
     margin-top: auto;
     background: #15513D;
@@ -87,4 +169,3 @@ footer ul li a {
     text-decoration: none;
     font-weight: 300;
 }
-
